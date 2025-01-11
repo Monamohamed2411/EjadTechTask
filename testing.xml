@@ -4,12 +4,11 @@
 
     <test name="SignUP">
         <classes>
-<!--            <class name="Test.TC1_SignUpTest"/>-->
-<!--            <class name="Test.TC2_LoginTest"/>-->
+            <class name="Test.TC1_InvalidSignUp"/>
+            <class name="Test.TC1_SignUpTest"/>
             <class name="Test.TC3_ForgetPasswordTest"/>
+            <class name="Test.TC2_LoginTest"/>
+            <class name="Test.TC4_SelectCategoryTest"/>
         </classes>
     </test>
-
-
-
 </suite> 

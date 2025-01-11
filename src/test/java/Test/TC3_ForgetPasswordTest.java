@@ -12,8 +12,9 @@ public class TC3_ForgetPasswordTest extends TestBase{
     NavigateToSignUpPage SignIn;
 
     @Test(priority = 1)
-    public void NavigateToSignUp(){
-
+    public void NavigateToSignUp() throws InterruptedException {
+        driver.get("https://egypt.souq.com/eg-en/");
+        Thread.sleep(2000);
         SignIn = new NavigateToSignUpPage(driver);
         SignIn.UserSignIn(driver);
 

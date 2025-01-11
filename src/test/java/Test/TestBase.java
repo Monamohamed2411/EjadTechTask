@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 
@@ -41,12 +42,12 @@ public class TestBase {
 	}	
 
 
-//	@AfterTest
-//	public void stopDriver() throws InterruptedException {
-//		Thread.sleep(1500);
-//		driver.quit();
-//
-//	}
+	@AfterTest
+	public void stopDriver() throws InterruptedException {
+		Thread.sleep(1500);
+		driver.quit();
+
+	}
 	@AfterMethod
 	public void screenshotOnFail(ITestResult result ){
 		if (result.getStatus() == ITestResult.FAILURE) {
